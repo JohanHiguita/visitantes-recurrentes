@@ -22,8 +22,8 @@ const schema = mongoose.Schema({
 const Visitor = mongoose.model("Visitor", schema)
 
 app.get("/", async (req, res) => {
-  if (!req.query.name || req.query.name == "") {
 
+  if (!req.query.name || req.query.name == "") {
     //create a new Anónimo user
     const visitor = new Visitor({ name: "Anónimo" })
     await visitor.save()
@@ -53,7 +53,6 @@ app.get("/", async (req, res) => {
   const visitors = await Visitor.find()
   res.render('index', {visitors})
   
-
 })
 
 app.listen(3000, () => console.log("Listening on port 3000 ..."))

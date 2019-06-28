@@ -1,14 +1,19 @@
 <table>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Visits</th>
-    </tr>
-    <% visitors.forEach(function(visitor){ %>
-    <tr>
-        <td><%= visitor._id %></td>
-        <td><%= visitor.name %></td>
-        <td><%= visitor.count %></td>
-    </tr>
-    <% }); %>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Visits</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% visitors.forEach(function(visitor){ %>
+        <tr>
+            <td><%= visitor._id %></td>
+            <td><%= visitor.name %></td>
+            <td><%= visitor.count %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+
 </table>
