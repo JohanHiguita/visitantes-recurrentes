@@ -2,7 +2,8 @@ const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 
-app.set('view engine', "ejs")
+//app.set('view engine', "ejs")
+app.set('view engine', "pug")
 
 mongoose.connect(
   process.env.MONGODB_URL || "mongodb://localhost:27017/mongo-1",
