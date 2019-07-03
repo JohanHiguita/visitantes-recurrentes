@@ -30,7 +30,7 @@ app.get("/", async (req, res) => {
     //create a new Anónimo user
     const visitor = new Visitor({ name: "Anónimo" })
     await visitor.save()
-    console.log("saved anonimo")
+    //console.log("saved anonimo")
   }else {
 
     Visitor.findOne({ name: req.query.name}, async (err, visitor) => {
@@ -44,9 +44,9 @@ app.get("/", async (req, res) => {
         try {
           const new_visitor = new Visitor({ name: req.query.name })
           await new_visitor.save()
-          console.log("visitor created")
+          //console.log("visitor created")
         } catch (error) {
-          console.error("error creating a new visitor")
+          //console.error("error creating a new visitor")
         }
         
       }    
